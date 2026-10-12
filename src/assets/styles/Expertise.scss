@@ -1,0 +1,7 @@
+.expertise-section { border-top: 1px solid var(--line); }
+.skills-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.skill-card { padding: 26px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); transition: transform .2s, border-color .2s; }
+.skill-card:hover { transform: translateY(-4px); border-color: rgba(99,230,209,.45); }
+.skill-card-top { display: flex; justify-content: space-between; color: var(--accent-dark); font: .75rem 'DM Mono', monospace; }.dark-mode .skill-card-top { color: var(--accent); }.skill-mark { font-size: 1.1rem; }
+.skill-card h3 { margin: 25px 0 8px; font-size: 1.3rem; }.skill-card p { font-size: .87rem; min-height: 55px; }.skill-tags, .project-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 20px; }.skill-tags span, .project-tags span { padding: 7px 9px; border: 1px solid var(--line); border-radius: 6px; color: var(--muted); font: .67rem 'DM Mono', monospace; }
+@media (max-width: 650px) { .skills-grid { grid-template-columns: 1fr; }.skill-card p { min-height: unset; } }

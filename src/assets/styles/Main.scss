@@ -1,0 +1,121 @@
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: inherit;
+}/* Hero and about styles are defined in src/index.scss to keep theme tokens consistent. */
+/* FLOATING SOCIAL ICONS */
+.hero-social-icons {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.hero-social-icon {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(100, 226, 208, 0.25);
+  border-radius: 15px;
+  background: rgba(16, 27, 32, 0.88);
+  color: #eaf5f4;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  pointer-events: auto;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.hero-social-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.hero-social-icon:hover {
+  transform: translateY(-4px) scale(1.05);
+  border-color: #64e2d0;
+  color: #64e2d0;
+  box-shadow: 0 10px 28px rgba(100, 226, 208, 0.16);
+}
+
+.hero-social-icon:focus-visible {
+  outline: 2px solid #64e2d0;
+  outline-offset: 4px;
+}
+
+/* Position relative to the portrait */
+.social-github {
+  top: 12%;
+  left: 5%;
+}
+
+.social-linkedin {
+  top: 36%;
+  right: -2%;
+}
+
+.social-instagram {
+  bottom: 12%;
+  right: 7%;
+}
+
+/* Keep the icons clear of the portrait and floating cards */
+@media (max-width: 800px) {
+  .hero-social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 13px;
+  }
+
+  .hero-social-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .social-github {
+    top: 8%;
+    left: 2%;
+  }
+
+  .social-linkedin {
+    top: 34%;
+    right: 0;
+  }
+
+  .social-instagram {
+    bottom: 8%;
+    right: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-social-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+  }
+
+  .social-github {
+    top: 5%;
+    left: 0;
+  }
+
+  .social-linkedin {
+    top: 30%;
+    right: -1%;
+  }
+
+  .social-instagram {
+    bottom: 5%;
+    right: 2%;
+  }
+}
