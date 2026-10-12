@@ -31,6 +31,7 @@ const projects = [
       "XML",
     ],
     link: "#",
+    linkLabel: "Coming Soon",
     status: "Android Development",
   },
   {
@@ -63,6 +64,7 @@ const projects = [
       "Excel",
     ],
     link: "#",
+    linkLabel: "Coming Soon",
     status: "Data Analytics",
   },
   {
@@ -77,7 +79,28 @@ const projects = [
       "Scikit-learn",
     ],
     link: "#",
+    linkLabel: "Coming Soon",
     status: "Predictive Analytics",
+  },
+  {
+    number: "06",
+    type: "FRONTEND DEVELOPMENT · PERSONAL BRANDING",
+    title: "Personal Portfolio Website",
+    description:
+      "A responsive personal portfolio showcasing my technical skills, projects, education, and professional journey. Built with React and TypeScript, styled using SCSS, and deployed on Vercel.",
+    stack: [
+      "React",
+      "TypeScript",
+      "SCSS",
+      "Git",
+      "GitHub",
+      "Vercel",
+    ],
+    link: "https://vivek-pandit-portfolio.vercel.app/",
+    linkLabel: "Live Demo",
+    github:
+      "https://github.com/Vikslove/vivek-pandit-portfolio",
+    status: "Live Website",
   },
 ];
 
@@ -136,7 +159,7 @@ function Project() {
                 <a
                   href={project.link}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   {project.linkLabel}{" "}
                   <span aria-hidden="true">↗</span>
@@ -145,6 +168,17 @@ function Project() {
                 <span className="project-link-pending">
                   {project.linkLabel}
                 </span>
+              )}
+
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub{" "}
+                  <span aria-hidden="true">↗</span>
+                </a>
               )}
             </div>
           </article>
